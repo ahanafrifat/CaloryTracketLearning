@@ -1,7 +1,5 @@
 package com.ahanafrifat.onboarding_presentation.components
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
@@ -23,7 +21,7 @@ fun ActionButton(
 ) {
     Button(
         onClick = onClick,
-        modifier = Modifier,
+        modifier = modifier,
         enabled = isEnable,
         shape = RoundedCornerShape(100.dp)
     ) {
