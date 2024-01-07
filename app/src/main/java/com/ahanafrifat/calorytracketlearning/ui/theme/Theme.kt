@@ -14,6 +14,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.ahanafrifat.core_ui.Dimensions
+import com.ahanafrifat.core_ui.LocalSpacing
 
 private val DarkColorPalette = darkColors(
     primary = BrightGreen,
@@ -46,12 +48,12 @@ fun CaloryTracketLearningTheme(darkTheme: Boolean = isSystemInDarkTheme(), conte
     } else {
         LightColorPalette
     }
-//    CompositionLocalProvider(LocalSpacing provides Dimensions()) {
+    CompositionLocalProvider(LocalSpacing provides Dimensions()) {
         MaterialTheme(
             colors = colors,
             typography = Typography,
             shapes = Shapes,
             content = content
         )
-//    }
+    }
 }
