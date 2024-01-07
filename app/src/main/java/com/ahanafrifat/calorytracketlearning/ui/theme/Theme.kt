@@ -1,19 +1,14 @@
 package com.ahanafrifat.calorytracketlearning.ui.theme
 
-import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
+import com.ahanafrifat.core_ui.Dimensions
+import com.ahanafrifat.core_ui.LocalSpacing
 
 private val DarkColorPalette = darkColors(
     primary = BrightGreen,
@@ -46,12 +41,12 @@ fun CaloryTracketLearningTheme(darkTheme: Boolean = isSystemInDarkTheme(), conte
     } else {
         LightColorPalette
     }
-//    CompositionLocalProvider(LocalSpacing provides Dimensions()) {
+    CompositionLocalProvider(LocalSpacing provides Dimensions()) {
         MaterialTheme(
             colors = colors,
             typography = Typography,
             shapes = Shapes,
             content = content
         )
-//    }
+    }
 }
